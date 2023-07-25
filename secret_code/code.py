@@ -1,5 +1,5 @@
 def decrypter_code_secret(Xr, Xi, Br, Bi):
-    #Convertir les parties réelles (Xr, Br) et imaginaires (Xi, Bi) en nombres complexes (X, B)
+    #Convertir les réelles (Xr, Br) et imaginaires (Xi, Bi) en nombres complexes (X, B)
     X = complex(Xr, Xi)
     B = complex(Br, Bi)
 
@@ -36,13 +36,13 @@ def main1():
     # et affichant les résultats du décryptage. 
     
     # Lecture du nombre total de cas de test T
-    T = int(input("Entrez le nombre de cas de tests (T) : ")) 
+    T = input("Entrez le nombre de cas de tests (T) : ")
 
     # Boucle pour chaque cas de test
     for k in range(T):
         print(f"\nCas de test {k + 1}:")
         # Lire les valeurs Xr, Xi, Br et Bi pour chaque cas de test
-        Xr, Xi, Br, Bi = map(int, input("Entrez Xr, Xi, Br, Bi : ").split()) 
+        Xr, Xi, Br, Bi = map(input("Entrez Xr, Xi, Br, Bi : ").split()) 
 
         # Appeler la fonction de décryptage 
         result = decrypter_code_secret(Xr, Xi, Br, Bi) 
